@@ -91,18 +91,17 @@ console.log(chocolate.__proto__)
 function Pessoa(nome, sobrenome){
     this.nome = nome
     this.sobrenome = sobrenome
+}
 
-    this.ExbirNomeCompleto = () => {
-        return `${nome} ${sobrenome}`
-    }
+Pessoa.prototype.exbirNomeCompleto= function(){
+    return `${this.nome} ${this.sobrenome}`
 }
 
 function PessoaFisica(nome, sobrenome){
-    Object.call(this, nome, sobrenome)
+    Pessoa.call(this, nome, sobrenome)
 }
+PessoaFisica.prototype = Object.create(Pessoa.prototype)
 
-// let wesdras = new PessoaFisica("Wesdras", "Alves")
-// wesdras.prototype = Object.create(Pessoa)
+let wesdras = new PessoaFisica("Wesdras", "Alves")
 
-// console.log(wesdras)
-// console.log(wesdras.ExbirNomeCompleto())
+console.log(wesdras.exbirNomeCompleto())
