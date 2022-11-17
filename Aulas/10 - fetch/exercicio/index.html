@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
     <title>Busca de Aluno</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
                 <a href="cadastro.html">Cadastro Aluno</a>
             </li>
             <li>
-                <a href="index.html">Cadastro Aluno</a>
+                <a href="index.html">Consulta de Aluno</a>
             </li>
         </ul>
     </nav>
@@ -34,18 +35,18 @@
         </form>
         <form>
             <h1>Busca por Nome ou Todos</h1>
-            <fieldset>
+            <fieldset id="pn-filter-nome" style="display:none">
                 <label>Nome</label>
                 <input name="nome" id="nome"/>
             </fieldset>
             <div>
-                <fieldset id="tipo-busca-todos">
+                <fieldset >
                     <label>Todos</label>
-                    <input type="radio" checked name="tipo-busca" id="tipo-busca" value="T"/>
+                    <input type="radio" checked name="tipo-busca" id="opt-busca-todos" value="T"/>
                 </fieldset>
-                <fieldset  id="tipo-busca-nome">
+                <fieldset  >
                     <label>Por Nome</label>
-                    <input type="radio"  name="tipo-busca" id="tipo-busca" value="N"/>
+                    <input type="radio"  name="tipo-busca" id="opt-busca-nome" value="N"/>
                 </fieldset>
             </div>
             <input type="button" id="btnBuscar" value="Buscar"/>
