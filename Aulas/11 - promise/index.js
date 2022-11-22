@@ -121,4 +121,19 @@ const executorDeTarefaHr = function(hrAgenda, minutoAgenda){
 
 executorDeTarefaHr(19,58).then(() => {
     console.log("EXECUTA O DESPERTADOR")
+}).finally(() => {
+    console.log("Finalizou")
 })
+
+
+
+function Validar(idsAserValidado){
+    document.querySelector(idsAserValidado[0])
+    document.querySelector(idsAserValidado[1])
+    document.querySelector(idsAserValidado[2])
+}
+
+
+Validar(["nome", "endereco", "cep", "cpf"]).then().catch(() => [
+    
+])
