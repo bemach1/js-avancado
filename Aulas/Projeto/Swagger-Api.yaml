@@ -35,7 +35,7 @@ paths:
           description: Campos do produto inválido
         '500':
           description: Erro inesperado no servidor
-  /produto{idProduto}/atualizar:
+  /produto/{idProduto}/atualizar:
     post:
       tags:
         - produto
